@@ -593,10 +593,7 @@ class FBO{
 	//-------------------------------------------------
 	// START AND COMPLETE CREATING FRAME BUFFER
 	//-------------------------------------------------
-	create(w=null, h=null){
-		if(w == null) w = mod.width;
-		if(h == null) h = mod.height;
-
+	create(w=mod.width, h=mod.height){
 		this.fbo = { frameWidth:w, frameHeight:h, ptr:ctx.createFramebuffer() };
 		this.aryDrawBuf.length = 0;
 
